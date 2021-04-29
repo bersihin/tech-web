@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/cloudinary": "^1.0.3-beta-4",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.11.0",
     "nuxt": "^2.15.4",

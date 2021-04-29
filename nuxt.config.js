@@ -35,7 +35,12 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@nuxtjs/cloudinary'
   ],
+
+  cloudinary: {
+    cloudName: 'bersihin'
+  },
 
   content: {
     markdown: {
