@@ -25,9 +25,17 @@
         class="relative lg:mr-8 text-sm lg:text-base"
       >
         <div class="flex items-center cursor-pointer">
+          <a
+            v-if="link.url.startsWith('https')"
+            :href="link.url"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ link.title }}
+          </a>
           <nuxt-link
+            v-else
             :to="link.url"
-            class="block text-center lg:w-auto"
             exact-active-class="font-bold text-ocean"
           >
             {{ link.title }}
@@ -42,12 +50,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  props: {
-    variant: {
-      type: String,
-      default: 'black',
-    },
-  },
   data: () => ({
     links: [
       {
@@ -60,11 +62,11 @@ export default Vue.extend({
       },
       {
         title: 'Event',
-        url: '/event',
+        url: 'https://www.notion.so/Event-a4fd4628c8c045d1b004fa820bc80481',
       },
       {
         title: 'Jobs',
-        url: '/jobs',
+        url: 'https://www.notion.so/Jobs-8cfbec3e99794858a7a6d0ade9bcbfba',
       },
       {
         title: 'About',
