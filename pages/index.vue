@@ -22,8 +22,8 @@
           Berlangganan Sekarang
         </nuxt-link>
       </div>
-      <div class="lg:w-1/2 flex items-center justify-center">
-        <img class="hidden md:block lg:w-10/12" src="~assets/hero.png" alt="" />
+      <div class="hidden lg:w-1/2 lg:flex items-center justify-center">
+        <img class="lg:w-10/12" src="~assets/hero.png" alt="" />
       </div>
     </div>
   </div>
