@@ -2,22 +2,34 @@
   <footer class="bg-navy">
     <div class="container mx-auto text-white px-8 lg:px-16 py-8 lg:py-24">
       <div class="flex flex-col lg:flex-row mb-4 lg:mb-0 lg:pb-12">
-        <div class="flex flex-row lg:w-4/12 mx-auto">
+        <div class="flex flex-row lg:w-1/12 mx-auto">
           <div
             class="flex flex-row w-full justify-around lg:justify-between items-center px-16 lg:px-0"
           >
-            <nuxt-link class="text-base lg:text-2xl" to="/blog">
-              Blog
-            </nuxt-link>
-            <nuxt-link class="text-base lg:text-2xl" to="/event">
-              Event
-            </nuxt-link>
-            <nuxt-link class="text-base lg:text-2xl" to="/jobs">
-              Jobs
-            </nuxt-link>
-            <nuxt-link class="text-base lg:text-2xl" to="/about">
-              About
-            </nuxt-link>
+            <a
+              href="https://twitter.com/bersihin_tech"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="hidden md:block lg:w-8"
+                style="z-index: -1"
+                src="~assets/twitter.svg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://github.com/bersihin"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="hidden md:block lg:w-8"
+                style="z-index: -1"
+                src="~assets/github.svg"
+                alt=""
+              />
+            </a>
           </div>
           <div class="flex flex-col"></div>
         </div>

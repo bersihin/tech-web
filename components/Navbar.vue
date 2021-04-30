@@ -50,12 +50,6 @@
           >
             {{ link.title }}
           </button>
-          <img
-            v-if="link.sub"
-            :src="require(`~/assets/icons/${arrow}.png`)"
-            alt=""
-            class="w-3 mb-1 ml-2"
-          />
         </div>
         <div v-if="link.open" class="absolute flex flex-col">
           <nuxt-link

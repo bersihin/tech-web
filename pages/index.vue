@@ -22,12 +22,9 @@
           Berlangganan Sekarang
         </nuxt-link>
       </div>
-      <img
-        class="hidden md:block lg:w-1/2"
-        style="z-index: -1"
-        :src="$cloudinary.image.url('web-home/hero')"
-        alt=""
-      />
+      <div class="lg:w-1/2 flex items-center justify-center">
+        <img class="hidden md:block lg:w-10/12" src="~assets/hero.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -35,29 +32,5 @@
 <script lang="js">
 import Vue from 'vue'
 
-export default Vue.extend({  
-  data: () => ({
-    selectedLocationTab: 'main',
-    values: [
-      {
-        icon: 'icons/stopwatch.png',
-        title: 'Jam Pengambilan Bervariasi',
-        description:
-          'Jam pengambilan kami bervariasi dari jam 1 siang hingga jam 10 malam.',
-      },
-      {
-        icon: 'icons/thumbs-up.png',
-        title: 'Kualitas Pencucian',
-        description:
-          'Kami sangat memperhatikan kebersihan pakaian yang kamu cuci karena itu akan memengaruhi kenyamanan harianmu.',
-      },
-      {
-        icon: 'icons/badge.png',
-        title: 'Garansi Layanan',
-        description:
-          'Kami memberikan garansi kerusakan dan kehilangan laundry kamu hingga Rp 500.000.',
-      },
-    ],
-  }),
-})
+export default Vue.extend({})
 </script>
