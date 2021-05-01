@@ -6,10 +6,12 @@
       <h1>{{ blog.title }}</h1>
       <h4>{{ blog.description }}</h4>
     </div>
-    <nuxt-content
-      :document="blog"
-      class="prose prose-sm sm:prose lg:prose-lg mx-auto"
-    />
+    <div class="relative">
+      <nuxt-content
+        :document="blog"
+        class="prose prose-sm sm:prose lg:prose-lg mx-auto"
+      />
+    </div>
   </div>
 </template>
 

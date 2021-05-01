@@ -1,13 +1,13 @@
 <template>
   <div
-    class="container mx-auto min-h-screen pt-36 lg:pt-32 pb-2 lg:pb-6 px-8 lg:px-16 flex flex-col max-w-4xl"
+    class="container mx-auto min-h-screen pt-36 lg:pt-32 lg:pb-4 px-8 lg:px-16 flex flex-col max-w-4xl"
   >
     <nuxt-link
       v-for="blog in blogs"
       :key="blog.slug"
       :to="`/blog/${blog.slug}`"
     >
-      <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-16">
+      <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-12">
         <h1>{{ blog.title }}</h1>
         <h4>{{ blog.description }}</h4>
       </div>
