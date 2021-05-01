@@ -9,10 +9,16 @@
             href="https://twitter.com/bersihin_tech"
             target="_blank"
             rel="noopener"
+            aria-label="Twitter"
           >
             <img class="md:block w-6 md:w-7" src="~assets/twitter.svg" alt="" />
           </a>
-          <a href="https://github.com/bersihin" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/bersihin"
+            target="_blank"
+            rel="noopener"
+            aria-label="Github"
+          >
             <img class="md:block w-6 md:w-7" src="~assets/github.svg" alt="" />
           </a>
         </div>
