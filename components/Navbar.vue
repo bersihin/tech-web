@@ -70,7 +70,7 @@ export default Vue.extend({
       },
       {
         title: 'About',
-        url: '/about',
+        url: 'https://www.notion.so/About-c1f473da30cd48439c29feb755280979',
       },
     ],
   }),
