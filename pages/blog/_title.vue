@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
-    <nuxt-content
-      :document="page"
-      class="prose prose-sm sm:prose lg:prose-lg mx-auto"
-    />
+    <div
+      class="container mx-auto pt-36 lg:pt-32 pb-12 lg:pb-16 px-8 lg:px-16 flex flex-col max-w-4xl"
+    >
+      <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-6">
+        <h1>{{ page.title }}</h1>
+        <h4>{{ page.description }}</h4>
+      </div>
+      <nuxt-content
+        :document="page"
+        class="prose prose-sm sm:prose lg:prose-lg mx-auto"
+      />
+    </div>
   </div>
 </template>
 
