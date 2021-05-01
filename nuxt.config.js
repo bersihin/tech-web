@@ -35,7 +35,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxt/content',
-    '@nuxtjs/cloudinary'
+    '@nuxtjs/cloudinary',
+    '@nuxtjs/dayjs'
   ],
 
   cloudinary: {

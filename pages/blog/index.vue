@@ -10,6 +10,7 @@
       <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-12">
         <h1>{{ blog.title }}</h1>
         <h4>{{ blog.description }}</h4>
+        <p>{{ $dayjs(blog.createdAt).format('D MMMM YYYY') }}</p>
       </div>
     </nuxt-link>
   </div>
@@ -26,7 +27,7 @@ export default Vue.extend({
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })
       })) as IContentDocument[]
-
+    console.log({ blogs })
     return {
       blogs,
     }

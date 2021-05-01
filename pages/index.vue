@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto min-h-screen flex flex-col lg:flex-row justify-center items-center pt-40 pb-16 lg:py-0 px-8 lg:px-16 w-full md:w-9/12 lg:w-full"
+    class="container mx-auto min-h-screen flex flex-col lg:flex-row justify-center items-center pt-36 md:pt-40 pb-16 lg:py-0 px-8 lg:px-16 w-full md:w-9/12 lg:w-full"
   >
     <div class="lg:w-1/2">
       <h2
@@ -15,7 +15,7 @@
         join us.
       </p>
       <nuxt-link
-        class="text-white py-5 block text-center lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500"
+        class="text-white py-4 md:py-5 block text-center text-lg lg:text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
         to="/blog"
       >
         Read Our Blog
