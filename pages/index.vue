@@ -15,7 +15,7 @@
         join us.
       </p>
       <nuxt-link
-        class="text-white py-4 md:py-5 block text-center text-lg lg:text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
+        class="text-white py-4 md:py-5 block text-center text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
         to="/blog"
       >
         Read Our Blog
