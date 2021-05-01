@@ -10,7 +10,7 @@
       <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-12">
         <h1>{{ blog.title }}</h1>
         <h4>{{ blog.description }}</h4>
-        <p class="text-base">
+        <p class="text-sm lg:text-base">
           <span>
             Published:
             {{ $dayjs(blog.createdAt).format('D MMMM YYYY') }}.
@@ -37,7 +37,7 @@ export default Vue.extend({
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })
       })) as IContentDocument[]
-    console.log({ blogs })
+
     return {
       blogs,
     }
