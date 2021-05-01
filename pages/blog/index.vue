@@ -10,7 +10,16 @@
       <div class="prose prose-sm sm:prose lg:prose-lg mx-auto mb-12">
         <h1>{{ blog.title }}</h1>
         <h4>{{ blog.description }}</h4>
-        <p>{{ $dayjs(blog.createdAt).format('D MMMM YYYY') }}</p>
+        <p class="text-base">
+          <span>
+            Published:
+            {{ $dayjs(blog.createdAt).format('D MMMM YYYY') }}.
+          </span>
+          <span>
+            Last updated:
+            {{ $dayjs(blog.updatedAt).format('D MMMM YYYY') }}.
+          </span>
+        </p>
       </div>
     </nuxt-link>
   </div>
@@ -23,6 +32,7 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content, error }) {
     const blogs = (await $content(`blogs`)
+      .sortBy('createdAt', 'desc')
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })
