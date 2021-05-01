@@ -1,6 +1,6 @@
 ---
-title: Nuxt Content + WindiCSS Typography
-description: Learn how to use @nuxt/content + WindiCSS Typography.
+title: Nuxt Content + Twind Typography
+description: Learn how to use @nuxt/content + Twind Typography.
 ---
 
 <p className="lead">

@@ -36,7 +36,8 @@
           <nuxt-link
             v-else
             :to="link.url"
-            exact-active-class="font-bold text-ocean"
+            active-class="font-bold text-ocean"
+            :exact="link.url === '/'"
           >
             {{ link.title }}
           </nuxt-link>

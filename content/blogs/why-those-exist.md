@@ -1,6 +1,6 @@
 ---
-title: Nuxt Content + WindiCSS Typography
-description: Learn how to use @nuxt/content + WindiCSS Typography.
+title: Nuxt Content + TailwindCSS Typography
+description: Learn how to use @nuxt/content + TailwindCSS Typography.
 ---
 
 <p className="lead">
