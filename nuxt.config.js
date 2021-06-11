@@ -26,7 +26,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    // 'nuxt-vite',
+    'nuxt-vite',
     'nuxt-windicss',
   ],
 
@@ -35,7 +35,6 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxt/content',
-    '@nuxtjs/cloudinary',
     '@nuxtjs/dayjs'
   ],
 

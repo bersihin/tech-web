@@ -1,15 +1,21 @@
 <template>
   <nav
-    class="container mx-auto inset-x-0 px-8 flex flex-col lg:flex-row items-center py-6 lg:px-16 absolute"
+    class="
+      container
+      mx-auto
+      inset-x-0
+      px-8
+      flex flex-col
+      lg:flex-row
+      items-center
+      py-6
+      lg:px-16
+      absolute
+    "
   >
     <nuxt-link to="/">
       <img
-        :src="
-          $cloudinary.image.url(`web-home/logo.png`, {
-            width: 200,
-            crop: 'fill',
-          })
-        "
+        src="~/assets/logo.png"
         alt="Bersihin Logo"
         width="150"
         style="backface-visibility: hidden"
@@ -17,7 +23,17 @@
       />
     </nuxt-link>
     <div
-      class="flex flex-row mt-2 lg:mt-0 w-64 lg:w-full flex-wrap justify-between lg:justify-start text-grey"
+      class="
+        flex flex-row
+        mt-2
+        lg:mt-0
+        w-64
+        lg:w-full
+        flex-wrap
+        justify-between
+        lg:justify-start
+        text-grey
+      "
     >
       <div
         v-for="link in links"
