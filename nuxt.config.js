@@ -11,6 +11,9 @@ export default {
       { hid: 'description', name: 'description', content: 'Introduce Bersihin technology team to the world by explain ourself, share what we done and what we learned, our event, also opportunity to work with us' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { hid: 'splitbee', async: true, 'data-api': '/_hive', src: '/bee.js'}
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
