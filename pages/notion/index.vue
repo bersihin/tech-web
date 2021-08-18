@@ -20,7 +20,6 @@ export default Vue.extend({
   }),
   methods: {
     mapPageUrl(pageId = "") {
-      console.log(pageId)
       pageId = pageId.replace(/-/g, "");
       return `/notion/${pageId}`;
     }
