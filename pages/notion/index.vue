@@ -94,8 +94,6 @@ export default Vue.extend({
 </script>
 
 <style>
-@import 'vue-notion/src/styles.css'; /* optional Notion-like styles */
-
 .button--green {
   display: inline-block;
   margin: 0.25em;
