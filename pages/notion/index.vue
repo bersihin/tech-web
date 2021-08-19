@@ -8,8 +8,8 @@
           <li class="flex items-center" v-for="(post, k) in posts" :key="k">
             <b>{{ post.date }}</b>
             <NuxtLink
-              v-if="post.slug"
-              :to="mapPageUrl(post.slug)"
+              v-if="post.route"
+              :to="mapPageUrl(post.route)"
               class="button--grey"
             >
               <b>{{ post.title }}</b>
@@ -26,8 +26,8 @@
             <ul>
               <li v-for="(post, k) in postsByTag.get(tag)" :key="k">
                 <NuxtLink
-                  v-if="post.slug"
-                  :to="mapPageUrl(post.slug)"
+                  v-if="post.route"
+                  :to="mapPageUrl(post.route)"
                   class="button--grey"
                 >
                   <b>{{ post.title }}</b>
@@ -46,13 +46,13 @@
 import Vue from 'vue'
 
 interface Page {
-  date: string
   id: string
-  preview: string
-  published: boolean
-  slug: string
-  tags: string[]
   title: string
+  route: string
+  tags: string[]
+  published: boolean
+  preview: string
+  date: string
 }
 
 export default Vue.extend({
@@ -60,7 +60,8 @@ export default Vue.extend({
   // @ts-ignore: $notion undefined
   async asyncData({ $notion }) {
     const pageTable: Page[] = await $notion.getPageTable(
-      '10327f9074b7433aad577ccd0020e971'
+      '0df023f744ef475781834cce0703c5ef',
+      'https://notion-api-worker.darkgrimoire.workers.dev/v1'
     )
 
     // sort published pages
@@ -79,6 +80,7 @@ export default Vue.extend({
         )
         return map
       }, new Map())
+
     return {
       posts,
       postsByTag,

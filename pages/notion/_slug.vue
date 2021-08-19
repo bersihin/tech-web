@@ -14,28 +14,32 @@ import 'prismjs'
 import 'prismjs/themes/prism.css'
 
 interface Page {
-  date: string
   id: string
-  preview: string
-  published: boolean
-  slug: string
-  tags: string[]
   title: string
+  route: string
+  tags: string[]
+  published: boolean
+  preview: string
+  date: string
 }
 
 export default Vue.extend({
-  name: 'Homepage',
+  name: 'Post',
   // @ts-ignore: $notion undefined
   async asyncData({ $notion, params, error }) {
     const { slug } = params
-    const pageTable : Page[] = await $notion.getPageTable(
-      '10327f9074b7433aad577ccd0020e971'
+
+    const pageTable: Page[] = await $notion.getPageTable(
+      '0df023f744ef475781834cce0703c5ef',
+      'https://notion-api-worker.darkgrimoire.workers.dev/v1'
     )
-    const page = pageTable.find((item) => item.published && item.slug === slug)
-    const blockMap = await $notion.getPageBlocks(page ? page.id : slug)
+    const page = pageTable.find((item) => item.published && item.route === slug)
+
+    const blockMap = await $notion.getPageBlocks(page ? page.id : slug, 'https://notion-api-worker.darkgrimoire.workers.dev/v1')
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })
     }
+
     return { blockMap }
   },
   data: () => ({
