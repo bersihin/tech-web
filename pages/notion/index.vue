@@ -93,7 +93,7 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
 .button--green {
   display: inline-block;
   margin: 0.25em;
