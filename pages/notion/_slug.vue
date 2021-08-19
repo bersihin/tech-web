@@ -55,6 +55,6 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
+<style>
 @import 'vue-notion/src/styles.css'; /* optional Notion-like styles */
 </style>
