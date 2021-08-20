@@ -39,7 +39,8 @@ interface Page {
   tags: string[]
   published: boolean
   preview: string
-  date: string
+  createdAt: string
+  updatedAt: string
 }
 
 export default Vue.extend({
