@@ -31,6 +31,7 @@ export default {
     '@nuxt/typescript-build',
     'nuxt-vite',
     'nuxt-windicss',
+    'vue-notion/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
