@@ -55,7 +55,10 @@ export default Vue.extend({
     )
     const page = pageTable.find((item) => item.published && item.route === slug)
 
-    const blockMap = await $notion.getPageBlocks(page ? page.id : slug, 'https://notion-api-worker.darkgrimoire.workers.dev/v1')
+    const blockMap = await $notion.getPageBlocks(
+      page ? page.id : slug,
+      'https://notion-api-worker.darkgrimoire.workers.dev/v1'
+    )
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })
     }
