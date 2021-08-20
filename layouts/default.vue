@@ -1,16 +1,7 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
     <Nuxt />
-    <Footer/>
+    <Footer />
   </div>
 </template>
-
-<style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-</style>
