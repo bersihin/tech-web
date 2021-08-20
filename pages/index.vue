@@ -28,7 +28,7 @@
       </nuxt-link>
       <a
         class="text-white py-4 md:py-5 block text-center text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
-        href="https://www.notion.so/Game-Design-7cfe275ca0914153a0b9c4657551eed4"
+        href="https://www.notion.so/0df023f744ef475781834cce0703c5ef"
         target="_blank"
       >
         Original Notion
