@@ -57,8 +57,7 @@ export default Vue.extend({
   // @ts-ignore: $notion undefined
   async asyncData({ $notion }) {
     const pageTable: Page[] = await $notion.getPageTable(
-      '0df023f744ef475781834cce0703c5ef',
-      'https://notion-api-worker.darkgrimoire.workers.dev/v1'
+      '0df023f744ef475781834cce0703c5ef'
     )
 
     // sort published pages
