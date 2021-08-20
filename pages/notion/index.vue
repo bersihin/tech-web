@@ -3,7 +3,7 @@
     <h1 class="text-5xl font-bold">vue-notion-example</h1>
     <div>
       <div class="m-1 text-left">
-        <h2 class="text-3xl font-bold">All Posts</h2>
+        <h2 class="my-8 text-3xl font-bold">All Posts</h2>
         <ul class="my-1 mx-auto">
           <li class="flex items-center" v-for="(post, k) in posts" :key="k">
             <b>{{ post.date }}</b>
@@ -35,9 +35,9 @@
         </ul>
       </div>
       <div class="m-1 text-left">
-        <h2 class="text-3xl font-bold">All Tags</h2>
+        <h2 class="my-8 text-3xl font-bold">All Tags</h2>
         <ul class="my-1 mx-auto">
-          <li v-for="(tag, k) in tags" :key="k">
+          <li class="my-4" v-for="(tag, k) in tags" :key="k">
             <b>{{ tag }}</b>
             <ul class="my-1 mx-auto">
               <li class="flex items-center" v-for="(post, k) in postsByTag.get(tag)" :key="k">
