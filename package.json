@@ -12,7 +12,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxt/content": "^1.14.0",
     "@nuxtjs/dayjs": "^1.4.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.16.1",

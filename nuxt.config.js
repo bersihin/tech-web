@@ -38,20 +38,11 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxt/content',
     '@nuxtjs/dayjs'
   ],
 
   cloudinary: {
     cloudName: 'bersihin'
-  },
-
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
