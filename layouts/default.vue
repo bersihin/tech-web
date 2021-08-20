@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Navbar v-if="!$route.path.startsWith('/notion')" />
+    <Navbar/>
     <Nuxt />
-    <Footer v-if="!$route.path.startsWith('/notion')" />
+    <Footer/>
   </div>
 </template>
 

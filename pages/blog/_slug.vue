@@ -1,16 +1,35 @@
 <template>
-  <NotionRenderer
-    :block-map="blockMap"
-    :pageLinkOptions="pageLinkOptions"
-    :mapPageUrl="mapPageUrl"
-    full-page
-    prism
-  />
+  <div
+    class="
+      container
+      mx-auto
+      min-h-screen
+      py-16
+      px-8
+      lg:px-16
+      mb-8
+      flex flex-col
+      max-w-4xl
+    "
+  >
+    <NotionRenderer
+      :block-map="blockMap"
+      :pageLinkOptions="pageLinkOptions"
+      :mapPageUrl="mapPageUrl"
+      full-page
+      prism
+    />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import 'prismjs'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-dart'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-yaml'
 import 'prismjs/themes/prism.css'
 
 interface Page {
@@ -53,7 +72,7 @@ export default Vue.extend({
   methods: {
     mapPageUrl(pageId = '') {
       pageId = pageId.replace(/-/g, '')
-      return `/notion/${pageId}`
+      return `/blog/${pageId}`
     },
   },
 })

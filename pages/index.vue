@@ -20,19 +20,6 @@
       >
         Read Our Blog
       </nuxt-link>
-      <nuxt-link
-        class="text-white ml-4 py-4 md:py-5 block text-center text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
-        to="/notion"
-      >
-        Notion Page Test
-      </nuxt-link>
-      <a
-        class="text-white py-4 md:py-5 block text-center text-base lg:inline-block px-12 font-bold mt-6 lg:mt-10 bg-navy rounded-6xl hover:bg-blue-800 transition-bg duration-500 tracking-wide"
-        href="https://www.notion.so/0df023f744ef475781834cce0703c5ef"
-        target="_blank"
-      >
-        Original Notion
-      </a>
     </div>
     <div
       class="md:w-9/12 lg:w-1/2 hidden md:flex items-center justify-center md:mt-24 lg:mt-0"
