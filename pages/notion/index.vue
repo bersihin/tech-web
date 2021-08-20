@@ -1,16 +1,32 @@
 <template>
-  <div class="container">
+  <div class="min-h-screen max-w-9/10 py-12 px-20 text-center">
+    <h1 class="text-5xl font-bold">vue-notion-example</h1>
     <div>
-      <h1 class="text-5xl font-bold">vue-notion-example</h1>
-      <div class="posts">
+      <div class="m-1 text-left">
         <h2 class="text-3xl font-bold">All Posts</h2>
-        <ul>
+        <ul class="my-1 mx-auto">
           <li class="flex items-center" v-for="(post, k) in posts" :key="k">
             <b>{{ post.date }}</b>
             <NuxtLink
               v-if="post.route"
               :to="mapPageUrl(post.route)"
-              class="button--grey"
+              class="
+                m-1
+                ml-4
+                rounded-lg
+                border-1 border-ocean
+                max-w-8/10
+                whitespace-nowrap
+                overflow-ellipsis overflow-hidden
+                text-ocean
+                no-underline
+                px-2
+                py-4
+                hover:text-white
+                hover:bg-ocean
+                transition-color
+                duration-250
+              "
             >
               <b>{{ post.title }}</b>
               {{ post.preview }}
@@ -18,17 +34,33 @@
           </li>
         </ul>
       </div>
-      <div class="posts">
+      <div class="m-1 text-left">
         <h2 class="text-3xl font-bold">All Tags</h2>
-        <ul>
+        <ul class="my-1 mx-auto">
           <li v-for="(tag, k) in tags" :key="k">
             <b>{{ tag }}</b>
-            <ul>
-              <li v-for="(post, k) in postsByTag.get(tag)" :key="k">
+            <ul class="my-1 mx-auto">
+              <li class="flex items-center" v-for="(post, k) in postsByTag.get(tag)" :key="k">
                 <NuxtLink
                   v-if="post.route"
                   :to="mapPageUrl(post.route)"
-                  class="button--grey"
+                  class="
+                    m-1
+                    ml-4
+                    rounded-lg
+                    border-1 border-ocean
+                    max-w-8/10
+                    whitespace-nowrap
+                    overflow-ellipsis overflow-hidden
+                    text-ocean
+                    no-underline
+                    px-2
+                    py-4
+                    hover:text-white
+                    hover:bg-ocean
+                    transition-color
+                    duration-250
+                  "
                 >
                   <b>{{ post.title }}</b>
                   {{ post.preview }}
@@ -94,71 +126,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style scoped>
-.button--green {
-  display: inline-block;
-  margin: 0.25em;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-.button--grey {
-  display: inline-block;
-  margin: 0.25em;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  max-width: 90%;
-  padding: 4em 0.5em;
-  display: block;
-  text-align: center;
-}
-.logo {
-  max-width: 100%;
-  padding: 0.5em;
-}
-.nav a {
-  color: #333 !important;
-}
-.links {
-  padding: 1em 0 1.5em 0;
-}
-.posts {
-  margin: 1em;
-  text-align: left;
-}
-.container h2 {
-  margin-top: 1.5em;
-}
-.container ul {
-  margin: 1em auto;
-  list-style: none;
-}
-.container p {
-  margin: 0.75em 0;
-}
-.container a {
-  max-width: 75%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-</style>
