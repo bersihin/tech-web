@@ -83,7 +83,7 @@ export default Vue.extend({
       },
       {
         title: 'Jobs',
-        url: 'https://www.notion.so/Jobs-8cfbec3e99794858a7a6d0ade9bcbfba',
+        url: '/jobs',
       },
       {
         title: 'About',
