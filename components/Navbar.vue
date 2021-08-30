@@ -41,16 +41,7 @@
         class="relative lg:mr-8 text-sm lg:text-base"
       >
         <div class="flex items-center cursor-pointer">
-          <a
-            v-if="link.url.startsWith('https')"
-            :href="link.url"
-            target="_blank"
-            rel="noopener"
-          >
-            {{ link.title }}
-          </a>
           <nuxt-link
-            v-else
             :to="link.url"
             active-class="font-bold text-ocean"
             :exact="link.url === '/'"
@@ -79,7 +70,7 @@ export default Vue.extend({
       },
       {
         title: 'Event',
-        url: 'https://www.notion.so/Event-a4fd4628c8c045d1b004fa820bc80481',
+        url: '/event',
       },
       {
         title: 'Jobs',
@@ -87,7 +78,7 @@ export default Vue.extend({
       },
       {
         title: 'About',
-        url: 'https://www.notion.so/About-c1f473da30cd48439c29feb755280979',
+        url: '/about',
       },
     ],
   }),
