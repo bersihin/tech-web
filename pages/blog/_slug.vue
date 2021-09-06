@@ -45,7 +45,12 @@ interface Page {
 
 export default Vue.extend({
   name: 'Post',
-  // @ts-ignore: $notion undefined
+  data() {
+    return {
+      pageLinkOptions: { component: 'NuxtLink', href: 'to' },
+    }
+  },
+  // @ts-ignore
   async asyncData({ $notion, params, error }) {
     const { slug } = params
 
@@ -59,15 +64,75 @@ export default Vue.extend({
       return error({ statusCode: 404, message: 'Post not found' })
     }
 
-    return { blockMap }
+    return { page, blockMap }
   },
-  data: () => ({
-    blockMap: null,
-  }),
-  computed: {
-    pageLinkOptions() {
-      return { component: 'NuxtLink', href: 'to' }
-    },
+  // @ts-ignore
+  head() {
+    // @ts-ignore
+    const { route, title, preview, tags } = this.page as Page
+
+    return {
+      title: title,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: tags.join(','),
+        },
+
+        // Title
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        { hid: 'application-name', name: 'application-name', content: title },
+        {
+          hid: 'apple-mobile-web-app-title',
+          name: 'apple-mobile-web-app-title',
+          content: title,
+        },
+
+        // Description
+        {
+          hid: 'description',
+          name: 'description',
+          content: preview,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: preview,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: preview,
+        },
+
+        // URL
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://tech.bersihin.co/blog/${route}`,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://tech.bersihin.co/blog/${route}`,
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: `https://tech.bersihin.co/blog/${route}`,
+        },
+      ],
+    }
   },
   methods: {
     mapPageUrl(pageId = '') {
@@ -79,5 +144,5 @@ export default Vue.extend({
 </script>
 
 <style>
-@import 'vue-notion/src/styles.css'; /* optional Notion-like styles */
+@import 'vue-notion/src/styles.css';
 </style>
