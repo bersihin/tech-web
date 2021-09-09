@@ -88,5 +88,95 @@ export default Vue.extend({
       return `/blog/${slug}`
     },
   },
+  // @ts-ignore
+  head() {
+    const { route, title, preview, tags } = {
+      route: 'blog',
+      title: 'Blog | Bersihin Tech',
+      preview: 'Our knowledge sharing to the world',
+      tags: [
+        'blog',
+        'bersihin',
+        'tech',
+        'developer',
+        'programmer',
+        'engineer',
+        'nuxt',
+        'flutter',
+        'firebase',
+        'test',
+        'integration',
+        'tutorial',
+        'write',
+        'consider',
+        'post',
+        'documentation',
+        'summary',
+      ],
+    }
+
+    return {
+      title: title,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: tags.join(','),
+        },
+
+        // Title
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        { hid: 'application-name', name: 'application-name', content: title },
+        {
+          hid: 'apple-mobile-web-app-title',
+          name: 'apple-mobile-web-app-title',
+          content: title,
+        },
+
+        // Description
+        {
+          hid: 'description',
+          name: 'description',
+          content: preview,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: preview,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: preview,
+        },
+
+        // URL
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://tech.bersihin.co/${route}`,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://tech.bersihin.co/${route}`,
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: `https://tech.bersihin.co/${route}`,
+        },
+      ],
+    }
+  },
 })
 </script>
