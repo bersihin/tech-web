@@ -38,7 +38,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
-      { hid: 'splitbee', async: true, 'data-api': '/_hive', src: '/bee.js'}
+      { async: true, src: 'https://splitbee.iwgx.workers.dev/sb.js'}
     ]
   },
 
