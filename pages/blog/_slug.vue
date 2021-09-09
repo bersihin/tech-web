@@ -46,11 +46,9 @@ interface Page {
 
 export default Vue.extend({
   name: 'Post',
-  data() {
-    return {
-      pageLinkOptions: { component: 'NuxtLink', href: 'to' },
-    }
-  },
+  data: () => ({
+    pageLinkOptions: { component: 'NuxtLink', href: 'to' },
+  }),
   // @ts-ignore
   async asyncData({ $notion, params, error }) {
     const { slug } = params

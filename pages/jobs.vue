@@ -18,7 +18,6 @@
 
 <script>
 export default {
-  data: () => ({ blockMap: null }),
   async asyncData({ $notion }) {
     const blockMap = await $notion.getPageBlocks(
       '8cfbec3e99794858a7a6d0ade9bcbfba'
