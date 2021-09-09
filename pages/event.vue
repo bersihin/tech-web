@@ -29,7 +29,7 @@ export default {
     const { route, title, preview, tags } = {
       route: 'event',
       title: 'Event | Bersihin Tech',
-      preview: 'Things that being held or attended by our developer',
+      preview: 'Things that being held or attended by our developers',
       tags: [
         'event',
         'bersihin',

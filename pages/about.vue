@@ -28,7 +28,7 @@ export default {
     const { route, title, preview, tags } = {
       route: 'about',
       title: 'About | Bersihin Tech',
-      preview: 'Know us more as developer in a laundry services',
+      preview: 'Just a bunch of developers that working on something great',
       tags: [
         'about',
         'bersihin',

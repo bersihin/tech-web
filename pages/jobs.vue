@@ -28,7 +28,7 @@ export default {
     const { route, title, preview, tags } = {
       route: 'about',
       title: 'Jobs | Bersihin Tech',
-      preview: 'Available opportunities at Bersihin Tech',
+      preview: 'Join us to create a better laundry services',
       tags: [
         'job',
         'opportunity',
