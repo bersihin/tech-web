@@ -31,29 +31,59 @@
         have done and learned to you. We feel flattered if you interested to
         join us.
       </p>
-      <nuxt-link
-        class="
-          text-white
-          py-4
-          md:py-5
-          block
-          text-center text-base
-          lg:inline-block
-          px-12
-          font-bold
-          mt-6
-          lg:mt-10
-          bg-navy
-          rounded-6xl
-          hover:bg-blue-800
-          transition-bg
-          duration-500
-          tracking-wide
-        "
-        to="/blog"
-      >
-        Read Our Blog
-      </nuxt-link>
+      <div class="flex items-stretch flex-col lg:flex-row">
+        <nuxt-link
+          class="
+            text-white
+            border-2 border-navy
+            py-3
+            md:py-4
+            block
+            text-center text-base
+            lg:inline-block
+            px-12
+            font-bold
+            mt-6
+            lg:mt-10
+            bg-navy
+            rounded-6xl
+            hover:bg-white
+            hover:text-navy
+            transition-bg
+            duration-500
+            tracking-wide
+          "
+          to="/blog"
+        >
+          Read Our Blog
+        </nuxt-link>
+        <a
+          class="
+            text-navy
+            border-2 border-navy
+            py-3
+            md:py-4
+            text-center text-base
+            px-12
+            font-bold
+            mt-6
+            lg:mt-10
+            rounded-6xl
+            hover:bg-navy
+            hover:text-white
+            transition-bg
+            duration-500
+            tracking-wide
+            ml-0
+            lg:ml-6
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://bersihin.co"
+        >
+          Visit Bersihin
+        </a>
+      </div>
     </div>
     <div
       class="
